@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>تقرير الأداء التشغيلي – 1 إلى 16 نوفمبر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#14212b; --ink2:#5b6873; --line:#dde2e7;
+  --accent:#1f5fbf; --accent2:#6f9be0; --accent3:#b9cff2; --muted:#c3c8cf; --row:#eef4fd;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#10161c; --surface:#17202a; --ink:#e8edf2; --ink2:#9aa7b3; --line:#2a3642;
+  --accent:#5b9bff; --accent2:#3f6db3; --accent3:#2c4a77; --muted:#4a5560; --row:#1b2a3d;}
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Tajawal','Segoe UI',Tahoma,Arial,sans-serif;line-height:1.8;font-size:16px;
+  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+main{max-width:860px;margin:0 auto;padding:40px 20px 64px}
+header{border-bottom:3px solid var(--accent);padding-bottom:20px;margin-bottom:28px}
+h1{font-size:clamp(28px,5vw,40px);font-weight:800;margin:0 0 6px;line-height:1.3}
+.sub{font-size:18px;color:var(--ink2);margin:0}
+.meta{margin-top:12px;font-size:14px;color:var(--ink2)}
+h2{font-size:22px;font-weight:700;margin:44px 0 12px;padding-inline-start:12px;border-inline-start:4px solid var(--accent)}
+p{margin:0 0 12px;max-width:70ch}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi b{display:block;font-size:30px;font-weight:800;line-height:1.2}
+.kpi span{font-size:14px;color:var(--ink2)}
+.kpi.main{border-color:var(--accent)}
+.kpi.main b{color:var(--accent)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);margin:12px 0 20px}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:460px}
+th,td{padding:10px 14px;text-align:center;border-bottom:1px solid var(--line)}
+th{background:var(--row);font-weight:700}
+td:first-child,th:first-child{text-align:start}
+tr:last-child td{border-bottom:0}
+tr.total td{font-weight:800;background:var(--row)}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 12px 10px;margin:16px 0}
+.fig h3{font-size:17px;margin:0 8px 2px;font-weight:700}
+.fig .cap{font-size:13px;color:var(--ink2);margin:6px 8px 0}
+.stack{display:flex;height:44px;border-radius:8px;overflow:hidden;margin:16px 8px 12px;direction:rtl}
+.stack div{display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;min-width:0}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:6px 16px;margin:0 8px;font-size:14px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-inline-end:8px;vertical-align:-1px}
+.bars{margin:14px 8px 6px}
+.bar{display:grid;grid-template-columns:150px 1fr 90px;align-items:center;gap:10px;margin-bottom:10px;font-size:14px}
+.track{height:18px;background:var(--row);border-radius:5px;overflow:hidden}
+.track div{height:100%;border-radius:5px}
+.bar b{font-weight:700;text-align:start}
+ul,ol{padding-inline-start:22px;margin:0 0 12px}
+li{margin-bottom:8px;max-width:70ch}
+.note{font-size:14px;color:var(--ink2);border-top:1px solid var(--line);margin-top:36px;padding-top:14px}
+@media (max-width:520px){.bar{grid-template-columns:110px 1fr 70px}}
+@media print{body{background:#fff}.fig,.kpi,.scroll{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>تقرير الأداء التشغيلي</h1>
+  <p class="sub">تحليل الطلبات والتوصيل والإلغاء</p>
+  <div class="meta">الفترة: 1 نوفمبر – 16 نوفمبر &nbsp;|&nbsp; إعداد رئيس قسم التشغيل: حسين عبدالمنعم السيد</div>
+</header>
+
+<h2>أولًا: الملخص التنفيذي</h2>
+<p>يعرض هذا التقرير مؤشرات الأداء التشغيلي خلال الفترة من 1 إلى 16 نوفمبر، بالاعتماد على البيانات المسجلة للطلبات وحالات التوصيل. بلغ إجمالي الطلبات 36 طلبًا، تم توصيل 19 طلبًا منها، بينما لم يتم توصيل 17 طلبًا، لتصل نسبة نجاح التوصيل الإجمالية إلى 52.78%.</p>
+<div class="kpis">
+  <div class="kpi"><b>36</b><span>إجمالي الطلبات</span></div>
+  <div class="kpi"><b>19</b><span>تم التوصيل</span></div>
+  <div class="kpi"><b>17</b><span>لم يتم التوصيل</span></div>
+  <div class="kpi main"><b>52.78%</b><span>نسبة نجاح التوصيل</span></div>
+</div>
+
+<div class="fig">
+  <h3>مصير الطلبات الـ 36</h3>
+  <div class="stack" id="stack" role="img" aria-label="توزيع الطلبات: تم التوصيل 52.78%، جديدة للمتابعة 30.56%، ملغاة 11.11%، جاهز (مرفوع لشركة الشحن) 5.56%"></div>
+  <div class="legend" id="legend"></div>
+  <p class="cap">النسب من إجمالي الطلبات (36). الطلبات غير الموصَّلة = 47.22%.</p>
+</div>
+
+<h2>ثانيًا: تحليل حالات الطلبات غير الموصَّلة</h2>
+<p>تتوزع الطلبات التي لم يتم توصيلها إلى ثلاث حالات تشغيلية: طلبات جديدة تحتاج إلى المتابعة، وطلبات تم إلغاؤها، وطلبات جاهزة (مرفوعة لشركة الشحن). تمثل الطلبات الجديدة للمتابعة أكبر حالة بعدد 11 طلبًا (64.71%)، تليها الطلبات الملغاة بعدد 4 طلبات (23.53%)، ثم الطلبات الجاهزة (المرفوعة لشركة الشحن) بعدد طلبين (11.76%).</p>
+<div class="scroll"><table id="t-status"></table></div>
+
+<div class="fig">
+  <h3>توزيع الطلبات غير الموصَّلة (17 طلبًا)</h3>
+  <div class="bars" id="bars"></div>
+  <p class="cap">طول الشريط = نسبة الحالة من الطلبات غير الموصَّلة.</p>
+</div>
+
+<h2>ثالثًا: أبرز النتائج والملاحظات</h2>
+<ul>
+  <li>بلغ متوسط الطلبات اليومي نحو 2.25 طلب (36 طلبًا خلال 16 يومًا)، وبلغ متوسط الطلبات الموصَّلة نحو 1.19 طلب يوميًا.</li>
+  <li>نسبة نجاح التوصيل (52.78%) أقل من نسبة الفترة السابقة من أبريل إلى أكتوبر (58.54%) بفارق 5.76 نقطة مئوية، علمًا بأن فترة هذا التقرير لم تكتمل بعد.</li>
+  <li>تمثل الطلبات الجديدة التي تحتاج إلى المتابعة (11 طلبًا) نحو 30.56% من إجمالي الطلبات، وهي أكبر مصدر للطلبات غير المكتملة.</li>
+  <li>بلغت نسبة الإلغاء 11.11% من إجمالي الطلبات (4 طلبات)، وهي أقل من نسبة الإلغاء في الفترة السابقة (18.21%).</li>
+  <li>لم تُسجَّل أي طلبات مسترجعة خلال الفترة.</li>
+  <li>هناك طلبان جاهزان (مرفوعان لشركة الشحن)؛ وفي حال توصيلهما تصبح نسبة نجاح التوصيل 58.33% (21 من 36).</li>
+</ul>
+
+</main>
+
+<script>
+const T=36,D=19,U=T-D;
+const S=[
+ {l:'جديد (للمتابعة)',v:11,c:'var(--accent2)'},
+ {l:'تم الإلغاء',v:4,c:'var(--accent)'},
+ {l:'جاهز (مرفوع لشركة الشحن)',v:2,c:'var(--accent3)',tc:'var(--ink)'}];
+const pct=(a,b)=>(a/b*100).toFixed(2)+'%';
+
+document.getElementById('t-status').innerHTML=
+ '<tr><th>الحالة</th><th>العدد</th><th>النسبة من غير الموصَّل</th><th>النسبة من إجمالي الطلبات</th></tr>'+
+ S.map(x=>`<tr><td>${x.l}</td><td>${x.v}</td><td>${pct(x.v,U)}</td><td>${pct(x.v,T)}</td></tr>`).join('')+
+ `<tr class="total"><td>الإجمالي</td><td>${U}</td><td>100%</td><td>${pct(U,T)}</td></tr>`;
+
+const parts=[{l:'تم التوصيل',v:D,c:'var(--muted)',tc:'var(--ink)'},...S];
+document.getElementById('stack').innerHTML=parts.map(p=>`<div style="width:${p.v/T*100}%;background:${p.c};${p.tc?'color:'+p.tc:''}">${p.v/T>0.1?pct(p.v,T):''}</div>`).join('');
+document.getElementById('legend').innerHTML=parts.map(p=>`<div><i style="background:${p.c}"></i>${p.l}: ${p.v} (${pct(p.v,T)})</div>`).join('');
+
+document.getElementById('bars').innerHTML=S.map(x=>`<div class="bar"><span>${x.l}</span><div class="track"><div style="width:${x.v/U*100}%;background:${x.c}"></div></div><b>${x.v} (${pct(x.v,U)})</b></div>`).join('');
+</script>
+</body>
+</html>
